@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
+    </script>
+    <script src="js/scripts.js"></script>
+    <title>Nerds</title>
+</head>
+
+<body>
+    <div class="site">
+
+        <header class="header">
+            <div class="container">
+                <nav class="nav">
+                    <div class="nav__logo"><a href="#"><img src="img/nerds-logo.png" alt=""></a></div>
+                    <div class="nav__items">
+                        <ul>
+                            <li class="nav__item"><a href="#">студия</a></li>
+                            <li class="nav__item"><a href="#">клиенты</a></li>
+                            <li class="nav__item"><a href="#">магазин</a></li>
+                            <li class="nav__item"><a href="#">контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav__cart">
+                        <a href="#">
+                            <img src="img/cart-icon.png" alt="">
+                            <p class="cart">корзина</p>
+                        </a>
+                    </div>
+                </nav>
+                <div class="promo__content">
+                    <div class="promo__text">
+                        <h3 class="h3">Долго, дорого,
+                            скрупулезно.</h3>
+                        <p class="p">Математически выверенный дизайн
+                            для вашего сайта или мобильного приложения.</p>
+                        <button class="promo__btn">узнать больше</button>
+                    </div>
+                    <div class="slider__dots">
+                        <a href="#">
+                            <img src="img/slider_dots.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section class="order">
+                <div class="container">
+                    <div class="columns">
+                        <div class="column">
+                            <img src="img/illustration-1.png" alt="">
+                            <h3 class="h3">Веб-сайты</h3>
+                            <p class="p">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
+                            <button class="column__btn column__btn1">заказать</button>
+                        </div>
+                        <div class="column">
+                            <img src="img/illustration-2.png" alt="">
+                            <h3 class="h3">Приложения</h3>
+                            <p class="p">Покорите топ-10 приложений в AppStore и Google Play</p>
+                            <button class="column__btn column__btn2">заказать</button>
+                        </div>
+                        <div class="column">
+                            <img src="img/illustration-3.png" alt="">
+                            <h3 class="h3">Презентации</h3>
+                            <p class="p">Вы даже не подозреваете,
+                                насколько вы изумительны!</p>
+                            <button class="column__btn column__btn3">заказать</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="studio">
+                <div class="container">
+                    <div class="studio__content">
+                        <h3 class="h3">Мы — маленькая, но гордая
+                            дизайн-студия из Краснодара. </h3>
+                        <p class="p">Исповедуем принципы минимализма и чистоты. Ставим математический расчет
+                            превыше креатива. Работаем не покладая рук, как роботы.</p>
+                        <p class="title">Выполняем заказы на разработку:</p>
+
+                        <div class="list__line"><span class="red_line"></span>
+                            <p class="p__list">Веб-сайтов любой сложности</p>
+                        </div>
+                        <div class="list__line"><span class="red_line"></span>
+                            <p class="p__list">Мобильных приложений для iOS и Android</p>
+                        </div>
+                        <div class="list__line"><span class="red_line"></span>
+                            <p class="p__list">Слайдшоу и видео для корпоративных презентаций</p>
+                        </div>
+                    </div>
+                    <div class="studio_stat">
+                        <img src="img/nerds-illustration.png" alt="" class="logo__illustration">
+                        <p class="p">с 2004 года Любим точность во всем:</p>
+                        <div class="percents">
+                            <div class="percent__column">
+                                <p class="number">146<sup>&#37;</sup></p>
+                                <p class="number__desc">Уровень самоотдачи</p>
+                            </div>
+                            <div class="percent__column">
+                                <p class="number">100<sup>&#37;</sup></p>
+                                <p class="number__desc">Соблюдение сроков</p>
+                            </div>
+                            <div class="percent__column">
+                                <p class="number">50<sup>&#37;</sup></p>
+                                <p class="number__desc">Минимальная предоплата</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="links">
+                <div class="container">
+                    <div class="links__wrap">
+                        <a href="#"><img src="img/html_ac.png" alt=""></a>
+                        <a href="#"><img src="img/borodinsky.png" alt=""></a>
+                        <a href="#"><img src="img/pink.png" alt=""></a>
+                        <a href="#"><img src="img/mishka.png" alt=""></a>
+                    </div>
+                </div>
+            </section>
+            <section class="map-cont">
+                <div id="map" class="map"></div>
+                <div class="map-info">
+                    <div class="map-info__wrap">
+                    <h3 class="map-info__header">NЁRDS DESIGN STUDIO</h3>
+                    <p class="map-info__desc">191186, Санкт-Петербург, 
+                        ул. Б. Конюшенная, д. 19/8
+                    </p>
+                    <p class="map-info__cont">
+                    тел. +7 (812) 275-75-75</p>
+                    <button class="column__btn column__btn1">напишите нам</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="foot_links">
+                    <a href="#" class="footer_link"><img src="img/vk.png" alt="" class="footer__img"></a>
+                    <a href="#" class="footer_link"><img src="img/fb.png" alt="" class="footer__img"></a>
+                    <a href="#" class="footer_link"><img src="img/inst.png" alt="" class="footer__img"></a>
+                </div>
+                <div class="footer__content">
+                    <h3 class="foot__h3">Давайте дружить, это выгодно!</h3>
+                    <p class="foot__p">Скидка 10% для друзей из социальных сетей.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
