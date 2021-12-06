@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="icon" href="img/letter-icon.ico">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
-    </script>
-    <script src="js/scripts.js"></script>
+    <link rel="stylesheet" href="css/media.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
     <title>Nerds</title>
 </head>
 
@@ -20,6 +23,8 @@
                 <nav class="nav">
                     <div class="nav__logo"><a href="#"><img src="img/nerds-logo.png" alt=""></a></div>
                     <div class="nav__items">
+                        <button class="nav_toggle"><label for="nav_toggle"></label></button>
+                        <input type="checkbox" id="nav_toggle">
                         <ul>
                             <li class="nav__item"><a href="#">студия</a></li>
                             <li class="nav__item"><a href="#">клиенты</a></li>
@@ -34,20 +39,58 @@
                         </a>
                     </div>
                 </nav>
-                <div class="promo__content">
-                    <div class="promo__text">
-                        <h3 class="h3">Долго, дорого,
-                            скрупулезно.</h3>
-                        <p class="p">Математически выверенный дизайн
-                            для вашего сайта или мобильного приложения.</p>
-                        <button class="promo__btn">узнать больше</button>
+
+                <div class="promo__content" id="slider">
+
+                    <div class="promo__content-wrap">
+                        <div class="promo__text">
+                            <div class="promo__text-content">
+                                <h3 class="h3">Долго, дорого,
+                                    скрупулезно.</h3>
+                                <p class="p">Математически выверенный дизайн
+                                    для вашего сайта или мобильного приложения.</p>
+                                <button class="promo__btn"><a href="#" class="btn__link">узнать больше</a></button>
+                            </div>
+                            <div class="promo__image">
+                                <img src="img/slide1.png" alt="" class="promo__pic1">
+                            </div>
+                        </div>
+
+                        <div class="promo__text hidden">
+                            <div class="promo__text-content">
+                                <h3 class="h3">Любим математику
+                                    как никто другой</h3>
+                                <p class="p">Никакого креатива, только математические формулы
+                                    для расчета идеальных пропорций.</p>
+                                <button class="promo__btn"><a href="#" class="btn__link">узнать больше</a></button>
+                            </div>
+                            <div class="promo__image">
+                                <img src="img/slide2.png" alt="" class="promo__pic1">
+                            </div>
+                        </div>
+
+                        <div class="promo__text hidden">
+                            <div class="promo__text-content">
+                                <h3 class="h3">Только ночь,
+                                    только хардкор</h3>
+                                <p class="p">Работать днем, как все? Мы против этого.
+                                    Ближе к полуночи работа только начинается.</p>
+                                <button class="promo__btn"><a href="#" class="btn__link">узнать больше</a></button>
+                            </div>
+                            <div class="promo__image">
+                                <img src="img/slide3.png" alt="" class="promo__pic1">
+                            </div>
+                        </div>
                     </div>
-                    <div class="slider__dots">
-                        <a href="#">
-                            <img src="img/slider_dots.png" alt="">
-                        </a>
+                    <div id="controls">
+                        <input type="radio" name="control" class="ctrl" id="one">
+                        <input type="radio" name="control" class="ctrl" id="two">
+                        <input type="radio" name="control" class="ctrl" id="three">
                     </div>
+                    <a class="prev arrow">&#10094</a>
+                    <a class="next arrow">&#10095</a>
                 </div>
+
             </div>
         </header>
         <main class="main">
@@ -58,20 +101,20 @@
                             <img src="img/illustration-1.png" alt="">
                             <h3 class="h3">Веб-сайты</h3>
                             <p class="p">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-                            <button class="column__btn column__btn1">заказать</button>
+                            <button class="column__btn column__btn1"><a href="#" class="btn__link">заказать</a></button>
                         </div>
                         <div class="column">
                             <img src="img/illustration-2.png" alt="">
                             <h3 class="h3">Приложения</h3>
                             <p class="p">Покорите топ-10 приложений в AppStore и Google Play</p>
-                            <button class="column__btn column__btn2">заказать</button>
+                            <button class="column__btn column__btn2"><a href="#" class="btn__link">заказать</a></button>
                         </div>
                         <div class="column">
                             <img src="img/illustration-3.png" alt="">
                             <h3 class="h3">Презентации</h3>
                             <p class="p">Вы даже не подозреваете,
                                 насколько вы изумительны!</p>
-                            <button class="column__btn column__btn3">заказать</button>
+                            <button class="column__btn column__btn3"><a href="#" class="btn__link">заказать</a></button>
                         </div>
                     </div>
                 </div>
@@ -126,16 +169,16 @@
                 </div>
             </section>
             <section class="map-cont">
-                <div id="map" class="map"></div>
+                <div id="map" class="map"><!-- <div style="position:relative;overflow:hidden;"><a href="https://yandex.by/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a><a href="https://yandex.by/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSEQPQFtjfXVyeXpgYQ==/?ll=30.322338%2C59.938217&source=wizgeo&utm_medium=mapframe&utm_source=maps&z=18" style="color:#eee;font-size:12px;position:absolute;top:14px;">Большая Конюшенная улица, 19/8 на карте Санкт‑Петербурга, ближайшее метро Гостиный двор — Яндекс.Карты</a><iframe src="https://yandex.by/map-widget/v1/-/CCUurGGtlD" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div> --> </div>
                 <div class="map-info">
                     <div class="map-info__wrap">
-                    <h3 class="map-info__header">NЁRDS DESIGN STUDIO</h3>
-                    <p class="map-info__desc">191186, Санкт-Петербург, 
-                        ул. Б. Конюшенная, д. 19/8
-                    </p>
-                    <p class="map-info__cont">
-                    тел. +7 (812) 275-75-75</p>
-                    <button class="column__btn column__btn1">напишите нам</button>
+                        <h3 class="map-info__header">NЁRDS DESIGN STUDIO</h3>
+                        <p class="map-info__desc">191186, Санкт-Петербург,
+                            ул. Б. Конюшенная, д. 19/8
+                        </p>
+                        <p class="map-info__cont">
+                            тел. +7 (812) 275-75-75</p>
+                        <button class="column__btn column__btn1">напишите нам</button>
                     </div>
                 </div>
             </section>
@@ -154,6 +197,6 @@
             </div>
         </footer>
     </div>
+    <script src="js/scripts.js"></script>
 </body>
-
 </html>

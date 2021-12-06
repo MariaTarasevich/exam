@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body {
+    font-family: roboto;
+}
+
 .site {
     display: flex;
     align-items: center;
@@ -17,12 +21,6 @@
     justify-content: center;
 }
 
-.header .container {
-    background-image: url(../IMG/slide1.png);
-    background-repeat: no-repeat; 
-    background-position: bottom right;
-}
-
 .container {
     width: 80%;
 }
@@ -34,6 +32,31 @@
     font-size: 16px;
     text-transform: uppercase;
     margin-top: 30px;
+}
+
+
+.nav_toggle {
+    position: relative;
+    display: none;
+    border: 0;
+    background: none;
+}
+
+.nav_toggle::before {
+    content: 'МЕНЮ';
+    color: #000;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.nav_toggle label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;;
 }
 
 .nav a {
@@ -59,25 +82,36 @@
     margin-left: 25px;
 }
 
+
 .promo__content {
     display: flex;
-    align-items: center;
     height: 88%;
-    width: 50%;
-    justify-content: space-between;
+    width: 100%;
+    position: relative;
 }
 
 .promo__text {
-    max-width: 400px;
+    display: flex;
 }
 
-.promo__text .h3{
+.promo__text-content {
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;
+    max-width: 500px;
+}
+
+.promo__text-content .h3{
     font-size: 55px;
 }
 
-.promo__text .p{
+.promo__text-content .p{
     font-size: 16px;
     margin: 35px 0;
+}
+
+.promo__content-wrap {
+    display: flex;
 }
 
 .promo__btn {
@@ -86,14 +120,96 @@
     height: 50px;
     background-color: #fb565a;
     text-transform: uppercase;
-    color: #fff;
+    cursor: pointer;
     font-weight: bold;
 }
 
-.slider__dots {
-    align-self: flex-end;
-    margin-bottom: 20px;
-    margin-right: -7%;
+.btn__link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.promo__image {
+    position: absolute;
+    bottom: 7%;
+    right: 0;
+    display: flex;
+    align-items: flex-end;
+    width: 56%;
+}
+
+.promo__image img {
+    width: 100%;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    color: #fb565a;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0.3px 3px 0;
+}
+
+.prev {
+    left: -60px;
+}
+
+.next {
+    right: -60px;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover{
+    background-color: rgba(0,0,0,0.8);
+}
+
+
+.ctrl {
+    border: none;
+}
+
+.ctrl {
+    position: relative;
+    height: 22px;
+    width: 22px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+}
+
+.ctrl::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+}
+
+.ctrl:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    border: 3px solid rgba(102, 102, 102, 0.672);
+    transform: translate(-50%, -50%);
+    visibility: visible;
+}
+
+.ctrl:not(:last-child) {
+    margin-right: 10px;
 }
 
 .order {
@@ -101,6 +217,10 @@
     display: flex;  
     align-items: center;
     justify-content: center;
+}
+
+.main {
+    width: 100%;
 }
 
 .columns {
@@ -119,6 +239,7 @@
     border: none;
     color: #fff;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .column {
@@ -175,16 +296,12 @@
     text-transform: uppercase;
 }
 
-.list_line {
-    display: flex;
-    align-items: center;
-}
-
 .red_line {
     display: inline-block;
     width: 25px;
     height: 2px;
     background-color: #FB5559;
+    margin-bottom: 3px;
 }
 
 .p__list {
@@ -254,7 +371,7 @@
     padding: 50px 0;
     position: relative;
     height: 500px;
-    width: 100%;
+    width: 100% !important;
 }
 
 .place-card, .place-card-large {
@@ -315,4 +432,20 @@
 .foot__h3 {
     font-size: 26px;
     font-weight: bold;
+}
+
+.hidden{
+    display: none;
+}
+
+#controls {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 5%;
+    z-index: 100;
+    margin-left: 4%;
+}
+
+#nav_toggle {
+    display: none;
 }
