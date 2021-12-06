@@ -1,12 +1,12 @@
-let controls = document.querySelectorAll('.ctrl'); //позволяет обрааться к html и css
+let controls = document.querySelectorAll('.ctrl'); //позволяет обрааться к html и css. тут массив инпутов
 let items=document.querySelectorAll(".promo__text");
 let currentControl;
-const next=document.querySelector('.next');
+const next=document.querySelector('.next');//qyeryselectornвыбирает 1 элем
 const prev=document.querySelector('.prev');
 
-function setCurrent(){
+function setCurrent(){ 
     for (let j = 0; j < items.length; j++) {
-        items[j].classList.add("hidden"); //обращение к классу
+        items[j].classList.add("hidden"); //обращение к классу. цикл добавляет класс хидден
         controls[j].checked=false;
         if(j==currentControl){
             controls[j].checked=true;
@@ -15,16 +15,16 @@ function setCurrent(){
     }
 }
 for (let i = 0; i < controls.length; i++) {
-    if(controls[i].checked){
+    if(controls[i].checked){ // если инпут чекед
         currentControl=i;
     }
-    controls[i].addEventListener('click', function(){
+    controls[i].addEventListener('click', function(){ //обработчик событий
         currentControl=i;
-        setCurrent();
+        setCurrent(); // вызов верхней функии, чтобы она сделла нужный элем видимым
     });
 }
-next.addEventListener('click', function(){
-    if(currentControl+1<3){
+next.addEventListener('click', function(){ //обработчик событий
+    if(currentControl+1<3){ // чтобы листало по 0, 1 и 2 элементу
         currentControl++;
     }
     else{
